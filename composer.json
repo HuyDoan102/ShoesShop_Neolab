@@ -1,0 +1,10 @@
+{
+    "name": "root/shoes-shop",
+    "authors": [
+        {
+            "name": "Huy, Nguyen Hong Doan",
+            "email": "donghogiacat@yahoo.com.vn"
+        }
+    ],
+    "require": {}
+}
