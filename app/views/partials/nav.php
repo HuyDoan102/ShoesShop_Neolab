@@ -4,7 +4,7 @@
   function blockPage() 
   {
     $blockRoutes = ['login'];
-    $currentUri = $_SERVER['REQUEST_URI']; //todos/edit/....
+    $currentUri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH),'/'); //todos/edit/....
 
     foreach($blockRoutes as $route) 
     { 
