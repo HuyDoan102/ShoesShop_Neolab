@@ -1,4 +1,4 @@
-<?php require('partials/header.php'); ?>
+<?php require('app/views/partials/header.php'); ?>
     About us
 
-<?php require('partials/footer.php'); ?>
+<?php require('app/views/partials/footer.php'); ?>
