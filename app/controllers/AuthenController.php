@@ -24,7 +24,8 @@ class AuthenController
     $password = $_POST['password'];
     $user = User::checkLogin($username, $password);
     if(\sizeof($user) == 0) {
-      return redirect('authen/login');
+      // return redirect('login');
+      return view("authen/login");
     }
     \session_start();
     $_SESSION['user'] = $user;
