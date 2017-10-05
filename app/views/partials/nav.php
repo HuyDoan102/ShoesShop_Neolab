@@ -1,12 +1,10 @@
 <?php 
-  session_start();
+  /*session_start();
 
   function blockPage() 
   {
     $blockRoutes = ['login'];
-    $currentUri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH),'/'); //todos/edit/....
-
-    var_dump($currentUri);
+    $currentUri = $_SERVER['REQUEST_URI']; //todos/edit/....
 
     foreach($blockRoutes as $route) 
     {
@@ -14,7 +12,6 @@
         return true;
       }
     }
-
     return false;
   }
 
@@ -23,7 +20,9 @@
     redirect('login');
   } elseif(!blockPage()) {
     $user = $_SESSION['user'];
-  }
+    <!-- <?php if(!blockPage()): ?> -->
+    <!-- <?php endif ?> -->
+  }*/
 ?>
 
 
@@ -31,13 +30,13 @@
 
 <nav>
   <ul>
-  <?php if(!blockPage()): ?>
+  
     <li><a href="/" >Home</a></li>
     <li><a href="/about" >About</a></li>
     <li><a href="/todos" >Todos</a></li>
     <li><a href="/contact" >Contact</a></li>
     <li><a href="/logout">Logout</a> </li>
-  <?php endif ?>
+  
   </ul>
 </nav>
 
