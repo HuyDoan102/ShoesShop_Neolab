@@ -6,8 +6,10 @@
     $blockRoutes = ['login'];
     $currentUri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH),'/'); //todos/edit/....
 
+    var_dump($currentUri);
+
     foreach($blockRoutes as $route) 
-    { 
+    {
       if(strpos($currentUri, $route)){
         return true;
       }
@@ -28,9 +30,7 @@
 
 
 <nav>
-  <ul> 
-    
-
+  <ul>
   <?php if(!blockPage()): ?>
     <li><a href="/" >Home</a></li>
     <li><a href="/about" >About</a></li>
